@@ -1,0 +1,811 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="什么是Hexo？
+
+Hexo是一款基于Node.js的静态博客框架
+
+准备工作安装Git安装git是为了使用git命令点击进入git官网进行下载
+注册github账号注册一个github账号，并且创建仓库github是个远程仓库，用git命令可以将我们的项目文件推送到这个仓库仓库名称必须为以下固定格式：
+
+[github账户名].github.io
+
+安装node.js点击进入node.js官网进">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo+Github搭建博客">
+<meta property="og:url" content="http://xuya.site/2016/09/24/Hexo+Github搭建个人博客/index.html">
+<meta property="og:site_name" content="Xu Ya blog">
+<meta property="og:description" content="什么是Hexo？
+
+Hexo是一款基于Node.js的静态博客框架
+
+准备工作安装Git安装git是为了使用git命令点击进入git官网进行下载
+注册github账号注册一个github账号，并且创建仓库github是个远程仓库，用git命令可以将我们的项目文件推送到这个仓库仓库名称必须为以下固定格式：
+
+[github账户名].github.io
+
+安装node.js点击进入node.js官网进">
+<meta property="og:image" content="http://ok9npmnqk.bkt.clouddn.com/1485158249622.png">
+<meta property="og:image" content="http://ok9npmnqk.bkt.clouddn.com/1485160791842.png">
+<meta property="og:image" content="http://ok9npmnqk.bkt.clouddn.com/1485172829302.png">
+<meta property="og:image" content="http://ok9npmnqk.bkt.clouddn.com/1485173030022.png">
+<meta property="og:image" content="http://ok9npmnqk.bkt.clouddn.com/1485173823727.png">
+<meta property="og:image" content="http://ok9npmnqk.bkt.clouddn.com/1485174203349.png">
+<meta property="og:image" content="http://ok9npmnqk.bkt.clouddn.com/1485173936744.png">
+<meta property="og:image" content="http://ok9npmnqk.bkt.clouddn.com/1485174280940.png">
+<meta property="og:image" content="http://ok9npmnqk.bkt.clouddn.com/1485174049600.png">
+<meta property="og:image" content="http://ok9npmnqk.bkt.clouddn.com/1485231678200.png">
+<meta property="og:image" content="http://ok9npmnqk.bkt.clouddn.com/1485232448200.png">
+<meta property="og:image" content="http://ok9npmnqk.bkt.clouddn.com/1485232208195.png">
+<meta property="og:image" content="http://ok9npmnqk.bkt.clouddn.com/1485231942836.png">
+<meta property="og:updated_time" content="2017-03-06T14:39:23.153Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo+Github搭建博客">
+<meta name="twitter:description" content="什么是Hexo？
+
+Hexo是一款基于Node.js的静态博客框架
+
+准备工作安装Git安装git是为了使用git命令点击进入git官网进行下载
+注册github账号注册一个github账号，并且创建仓库github是个远程仓库，用git命令可以将我们的项目文件推送到这个仓库仓库名称必须为以下固定格式：
+
+[github账户名].github.io
+
+安装node.js点击进入node.js官网进">
+<meta name="twitter:image" content="http://ok9npmnqk.bkt.clouddn.com/1485158249622.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://xuya.site/2016/09/24/Hexo+Github搭建个人博客/"/>
+
+
+
+
+
+  <title> Hexo+Github搭建博客 | Xu Ya blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?31379905820c98af9f041ba3c2971602";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Xu Ya blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <p class="site-subtitle">Xu Ya blog</p>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://xuya.site/2016/09/24/Hexo+Github搭建个人博客/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Xu Ya">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/uploads/avatar.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Xu Ya blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Xu Ya blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Hexo+Github搭建博客
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-09-24T00:13:25+08:00">
+                2016-09-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">Hexo</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>什么是Hexo？</p>
+<blockquote>
+<p>Hexo是一款基于Node.js的静态博客框架</p>
+</blockquote>
+<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><p>安装git是为了使用git命令<br>点击进入<a href="https://git-scm.com/" target="_blank" rel="external">git官网</a>进行下载</p>
+<h2 id="注册github账号"><a href="#注册github账号" class="headerlink" title="注册github账号"></a>注册github账号</h2><p>注册一个github账号，并且创建仓库<br>github是个远程仓库，用git命令可以将我们的项目文件推送到这个仓库<br>仓库名称必须为以下固定格式：</p>
+<ul>
+<li>[github账户名].github.io</li>
+</ul>
+<h2 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h2><p>点击进入<a href="https://nodejs.org/en/" target="_blank" rel="external">node.js官网</a>进行下载<br>ps:在安装node时，会将npm也集成到里面一起安装，npm是个包管理工具</p>
+<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">npm install hexo-cli -g//在全局安装hexo</div><div class="line">npm install hexo-deployer-git --save//hexo的发布插件</div></pre></td></tr></table></figure>
+<h1 id="初始化博客"><a href="#初始化博客" class="headerlink" title="初始化博客"></a>初始化博客</h1><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">hexo init</div></pre></td></tr></table></figure>
+<p>初始化博客以后，我们可以看到博客文件夹里的文件是这样的：</p>
+<p><img src="http://ok9npmnqk.bkt.clouddn.com/1485158249622.png" alt=""></p>
+<h1 id="启动本地服务"><a href="#启动本地服务" class="headerlink" title="启动本地服务"></a>启动本地服务</h1><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">hexo server</div></pre></td></tr></table></figure>
+<p>访问地址：localhost:4000<br>如果想要更换端口号：<br><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">hexo server -p 5000</div></pre></td></tr></table></figure></p>
+<p>在地址栏输入localhost:5000，就可以看到以下页面：</p>
+<p><img src="http://ok9npmnqk.bkt.clouddn.com/1485160791842.png" alt=""></p>
+<h1 id="打造博客专属域名"><a href="#打造博客专属域名" class="headerlink" title="打造博客专属域名"></a>打造博客专属域名</h1><p>在使用HEXO+github搭建了自己的博客后，我的博客网址是：<a href="http://webrenee7.github.io" target="_blank" rel="external">http://webrenee7.github.io</a>，那么如何打造博客的专属域名呢？</p>
+<h2 id="购买域名"><a href="#购买域名" class="headerlink" title="购买域名"></a>购买域名</h2><p>我们可以通过<a href="https://wanwang.aliyun.com/" target="_blank" rel="external">万网</a>申请，查找你想申请的域名，如果可以买，购买就可以了。<br>比如我输入”xuya”，会列出已经注册和未注册的域名：<br><img src="http://ok9npmnqk.bkt.clouddn.com/1485172829302.png" alt="Alt text"></p>
+<p>购买时需要输入域名所有者信息</p>
+<h2 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h2><p>依次点击控制台——&gt;域名与网站（万网）——&gt;域名，跳到如下页面：</p>
+<p><img src="http://ok9npmnqk.bkt.clouddn.com/1485173030022.png" alt="Alt text"></p>
+<p>然后点击管理–&gt;域名解析<br>接下来，需要将你购买的域名和ip地址关联起来，那么如何知道你的IP地址呢？很简单，只要在DOS中运行以下命令即可</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">ping www.webrenee7.github.io</div></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<p><img src="http://ok9npmnqk.bkt.clouddn.com/1485173823727.png" alt="Alt text"></p>
+<p>发现我的IP地址是151.101.100.133，只要输入到记录值那里，点击确定就行。<br><img src="http://ok9npmnqk.bkt.clouddn.com/1485174203349.png" alt="Alt text"></p>
+<h2 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h2><p>在你的博客项目source文件夹下创建一个CNAME文件</p>
+<p><img src="http://ok9npmnqk.bkt.clouddn.com/1485173936744.png" alt="Alt text"></p>
+<p>在CNAME中输入：www.xuya.site (你购买的域名)</p>
+<p><img src="http://ok9npmnqk.bkt.clouddn.com/1485174280940.png" alt="Alt text"></p>
+<p>然后重新提交到github即可</p>
+<p>OK，现在就可以在地址栏中输入你的域名进行访问了！</p>
+<p><img src="http://ok9npmnqk.bkt.clouddn.com/1485174049600.png" alt="Alt text"></p>
+<p>以后不用再担心没钱买服务器，github就可以帮我们做到了，虽然有点慢，但还是可以将就用的~</p>
+<h1 id="配置博客"><a href="#配置博客" class="headerlink" title="配置博客"></a>配置博客</h1><h2 id="目录结构解读"><a href="#目录结构解读" class="headerlink" title="目录结构解读"></a>目录结构解读</h2><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">|-- _config.yml</div><div class="line">|-- package.json</div><div class="line">|-- scaffolds</div><div class="line">|-- scripts</div><div class="line">|-- source</div><div class="line">    |-- _drafts</div><div class="line">    |-- _posts</div><div class="line">|-- themes</div></pre></td></tr></table></figure>
+<p><strong>_config.yml</strong>：全局配置文件，网站的很多信息都在这里配置，诸如网站名称，副标题，描述，作者，语言，主题，部署等等参数。这个文件下面会做较为详细的介绍。</p>
+<p><strong>package.json</strong>：hexo框架的参数，如果不小心把它删掉了，没关系，新建一个文件，讲内容写入文件，保存就OK了。里面的参数基本上是固定的，如下：<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">&#123;</div><div class="line">    &quot;name&quot;: &quot;hexo&quot;,</div><div class="line">    &quot;version&quot;: &quot;2.4.5&quot;,</div><div class="line">    &quot;private&quot;: true,</div><div class="line">    &quot;dependen</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>scaffolds</strong>：scaffolds是“脚手架、骨架”的意思，当你新建一篇文章（hexo new ‘title’）的时候，hexo是根据这个目录下的文件进行构建的。基本不用关心。</p>
+<p><strong>scripts</strong>：脚本目录，此目录下的JavaScript文件会被自动执行。</p>
+<p><strong>source</strong>：这个目录很重要，新建的文章都是在保存在这个目录下的，有两个子目录： _drafts ， _posts 。需要新建的博文都放在 _posts 目录下。<br>_posts 目录下是一个个 markdown 文件。你应该可以看到一个 hello-world.md 的文件，文章就在这个文件中编辑。<br>_posts 目录下的md文件，会被编译成html文件，放到 public （此文件现在应该没有，因为你还没有编译过）文件夹下。</p>
+<p><strong>themes</strong>：网站主题目录，hexo有非常好的主题拓展，支持的主题也很丰富。该目录下，每一个子目录就是一个主题。你也可以自己下载主题放到该文件下。<br>主题目录下我们可以进行很多自定义的操作，诸如，给网站添加微博秀、添加评论组件、添加分享组件、添加统计等等，让自己的博客网站更丰富、有趣、实用。</p>
+<h2 id="站点配置文件解读"><a href="#站点配置文件解读" class="headerlink" title="站点配置文件解读"></a>站点配置文件解读</h2><h3 id="网站"><a href="#网站" class="headerlink" title="网站"></a>网站</h3><figure class="highlight"><table><tr><td class="code"><pre><div class="line">title: 徐娅的个人博客 #网站标题</div><div class="line">subtitle: 一枚程序媛的成长之路 #网站副标题</div><div class="line">description: 记录成长的点滴 #网站描述</div><div class="line">author: Xu Ya #作者</div><div class="line">language: zh-CN #网站使用的语言</div><div class="line">timezone: #网站时区，hexo默认使用您电脑的时区</div></pre></td></tr></table></figure>
+<h3 id="网址"><a href="#网址" class="headerlink" title="网址"></a>网址</h3><figure class="highlight"><table><tr><td class="code"><pre><div class="line">## 如果您的网站存放在子目录中，例如 http://yoursite.com/blog，则请将您的 url 设为http://yoursite.com/blog 并把 root 设为 /blog/。</div><div class="line">root: / #网站根目录</div><div class="line">permalink: :year/:month/:day/:title/ #文章的永久链接格式</div><div class="line">permalink_defaults: #永久链接中各部分的值</div></pre></td></tr></table></figure>
+<h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><figure class="highlight"><table><tr><td class="code"><pre><div class="line">source_dir: source #资源文件夹</div><div class="line">public_dir: public #公共文件夹</div><div class="line">tag_dir: tags #标签文件夹</div><div class="line">archive_dir: archives #归档文件夹</div><div class="line">category_dir: categories #分类文件夹</div><div class="line">code_dir: downloads/code #Include code 文件夹</div><div class="line">i18n_dir: :lang #国际化（i18n）文件夹</div><div class="line">skip_render: #跳过指定文件的渲染，您可使用 glob 表达式来匹配路径。</div></pre></td></tr></table></figure>
+<h3 id="文章"><a href="#文章" class="headerlink" title="文章"></a>文章</h3><figure class="highlight"><table><tr><td class="code"><pre><div class="line">new_post_name: :title.md #新文章的文件名称</div><div class="line">default_layout: post #预设布局</div><div class="line">titlecase: false #把标题转换为 title case</div><div class="line">external_link: true #在新标签中打开链接</div><div class="line">filename_case: 0 #把文件名称转换为 (1) 小写或 (2) 大写</div><div class="line">render_drafts: false #显示草稿</div><div class="line">post_asset_folder: true #启动Asset文件夹</div><div class="line">relative_link: false #把链接改为与根目录的相对位址</div><div class="line">future: true #显示未来的文章</div><div class="line">highlight: #代码块的设置</div><div class="line">  enable: true</div><div class="line">  line_number: true</div><div class="line">  auto_detect: false</div><div class="line">  tab_replace:</div></pre></td></tr></table></figure>
+<h3 id="分类-amp-标签"><a href="#分类-amp-标签" class="headerlink" title="分类 &amp; 标签"></a>分类 &amp; 标签</h3><figure class="highlight"><table><tr><td class="code"><pre><div class="line">default_category: uncategorized #默认分类</div><div class="line">category_map: #分类别名</div><div class="line">tag_map: #标签别名</div></pre></td></tr></table></figure>
+<h3 id="日期-时间-格式化"><a href="#日期-时间-格式化" class="headerlink" title="日期/时间 格式化"></a>日期/时间 格式化</h3><figure class="highlight"><table><tr><td class="code"><pre><div class="line">## Hexo 使用 Moment.js 来解析和显示时间。</div><div class="line">## http://momentjs.com/docs/#/displaying/format/</div><div class="line">date_format: YYYY-MM-DD #日期格式化</div><div class="line">time_format: HH:mm:ss #日期格式化</div></pre></td></tr></table></figure>
+<h3 id="分页"><a href="#分页" class="headerlink" title="分页"></a>分页</h3><figure class="highlight"><table><tr><td class="code"><pre><div class="line">per_page: 10 #每页显示的文章量 (0 = 关闭分页功能)</div><div class="line">pagination_dir: page #分页目录</div></pre></td></tr></table></figure>
+<h3 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h3><figure class="highlight"><table><tr><td class="code"><pre><div class="line">## Plugins: https://hexo.io/plugins/</div><div class="line">## Themes: https://hexo.io/themes/</div><div class="line">theme: hexo-theme-random #当前主题名称。值为false时禁用主题</div></pre></td></tr></table></figure>
+<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><figure class="highlight"><table><tr><td class="code"><pre><div class="line">deploy: #部署部分的设置</div><div class="line">  type: git</div><div class="line">  repo: https://webrenee7:github_xy0827@github.com/webrenee7/webrenee7.github.io.git</div><div class="line">  branch: master</div><div class="line">  message: push</div></pre></td></tr></table></figure>
+<h2 id="我的基本配置"><a href="#我的基本配置" class="headerlink" title="我的基本配置"></a>我的基本配置</h2><h3 id="修改网站相关信息"><a href="#修改网站相关信息" class="headerlink" title="修改网站相关信息"></a>修改网站相关信息</h3><figure class="highlight js"><table><tr><td class="code"><pre><div class="line">title: 徐娅的个人博客</div><div class="line">description: 一枚程序媛的成长之路</div><div class="line">author: Xu Ya</div></pre></td></tr></table></figure>
+<h3 id="配置个人域名-如果有的话"><a href="#配置个人域名-如果有的话" class="headerlink" title="配置个人域名(如果有的话)"></a>配置个人域名(如果有的话)</h3><figure class="highlight js"><table><tr><td class="code"><pre><div class="line">url: http:<span class="comment">//xuya.site</span></div></pre></td></tr></table></figure>
+<h3 id="配置部署"><a href="#配置部署" class="headerlink" title="配置部署"></a>配置部署</h3><figure class="highlight js"><table><tr><td class="code"><pre><div class="line">deploy:</div><div class="line">    type: git</div><div class="line">    repo: https:<span class="comment">//[username]:[pwd]@github.com/webrenee7/webrenee7.github.io.git</span></div><div class="line">    branch: master</div><div class="line">    message: push</div></pre></td></tr></table></figure>
+<p>注意：</p>
+<ul>
+<li>配置文件中不能有注释</li>
+<li>不能随意删除以上代码中的空格</li>
+</ul>
+<h2 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h2><p>如果不喜欢默认的主题，可以到hexo官网找到自己喜欢的主题包，然后下载到themes中进行使用即可</p>
+<h3 id="克隆主题到themes"><a href="#克隆主题到themes" class="headerlink" title="克隆主题到themes"></a>克隆主题到themes</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="built_in">cd</span> themes</div><div class="line">git <span class="built_in">clone</span> <span class="string">"[theme url]"</span></div></pre></td></tr></table></figure>
+<h3 id="修改主题名称"><a href="#修改主题名称" class="headerlink" title="修改主题名称"></a>修改主题名称</h3><p>打开根目录下的_config.yml文件修改：<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">theme:[theme name]</div></pre></td></tr></table></figure></p>
+<h2 id="更换网页图标"><a href="#更换网页图标" class="headerlink" title="更换网页图标"></a>更换网页图标</h2><p>在source目录下替换favicon.ico图片即可</p>
+<h2 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h2><ul>
+<li>手动创建：<br>  source/_posts目录下，新建note.md文件</li>
+<li>命令创建(会自动生成文章标题，发表时间，标签信息) 推荐：<br>  在项目根目录下执行：<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">hexo new note.md</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="修改头像"><a href="#修改头像" class="headerlink" title="修改头像"></a>修改头像</h2><p>在themes/hexo-theme-next/source/uploads中修改avatar.png图片<br>如果没有uploads目录，需要我们手动创建<br>修改主题配置文件：<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">avatar: /uploads/avatar.png</div></pre></td></tr></table></figure></p>
+<h2 id="修改导航"><a href="#修改导航" class="headerlink" title="修改导航"></a>修改导航</h2><p>编辑主题配置文件<br><strong>导航链接</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">menu:</div><div class="line">  home: /</div><div class="line">  categories: /categories</div><div class="line">  about: /about</div><div class="line">  archives: /archives</div><div class="line">  tags: /tags</div><div class="line">  #sitemap: /sitemap.xml</div><div class="line">  #commonweal: /404.html</div></pre></td></tr></table></figure></p>
+<p>需要哪个，把前面的#注释去了<br>编辑themes/hexo-theme-next/languages/zh-Hans.yml<br><strong>导航文字</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">menu:</div><div class="line">  home: 首页</div><div class="line">  archives: 归档</div><div class="line">  categories: 分类</div><div class="line">  schedule: 日程</div><div class="line">  tags: 标签</div><div class="line">  about: 关于</div><div class="line">  search: 搜索</div><div class="line">  commonweal: 公益404</div></pre></td></tr></table></figure></p>
+<h2 id="修改底部"><a href="#修改底部" class="headerlink" title="修改底部"></a>修改底部</h2><p>编辑themes/hexo-theme-next/layout/_partials/下的footer.swig文件</p>
+<h2 id="图片的使用"><a href="#图片的使用" class="headerlink" title="图片的使用"></a>图片的使用</h2><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">![图片描述](图片地址)</div></pre></td></tr></table></figure>
+<ul>
+<li><p>使用目录下的图片<br>需要修改站点配置文件：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">post_asset_folder:true</div></pre></td></tr></table></figure>
+</li>
+<li><p>使用图片外链地址</p>
+</li>
+</ul>
+<h2 id="链接的使用"><a href="#链接的使用" class="headerlink" title="链接的使用"></a>链接的使用</h2><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">[链接文字](链接地址)</div></pre></td></tr></table></figure>
+<h2 id="新建页面"><a href="#新建页面" class="headerlink" title="新建页面"></a>新建页面</h2><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">new hexo new page about</div></pre></td></tr></table></figure>
+<h2 id="侧边栏"><a href="#侧边栏" class="headerlink" title="侧边栏"></a>侧边栏</h2><p>编辑主题配置文件：<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">toc:</div><div class="line">  enable: true #侧边栏是否可用</div><div class="line">  number: false #是否自动编号，默认编号</div></pre></td></tr></table></figure></p>
+<h2 id="阅读全文"><a href="#阅读全文" class="headerlink" title="阅读全文"></a>阅读全文</h2><p>在文章中使用more手动进行截断(推荐)<br>在文章的 front-matter 中添加 description，并提供文章摘录<br>自动形成摘要，在 主题配置文件 中添加：<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">auto_excerpt:</div><div class="line">  enable: true</div><div class="line">  length: 150 #默认截取的长度为 150 字符，可以根据需要自行设定</div></pre></td></tr></table></figure></p>
+<h2 id="阅读次数"><a href="#阅读次数" class="headerlink" title="阅读次数"></a>阅读次数</h2><ul>
+<li>注册LeanCloud账号</li>
+<li>创建应用</li>
+<li>权限配置（新建Class名必须为Counter）</li>
+<li>在应用Key获取AppID以及AppKey</li>
+<li>编辑主题配置文件：<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">leancloud_visitors:</div><div class="line">  enable: true</div><div class="line">  app_id: joaeuuc4hsqudUUwx4gIvGF6-gzGzoHsz</div><div class="line">  app_key: E9UJsJpw1omCHuS22PdSpKoh</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="百度统计"><a href="#百度统计" class="headerlink" title="百度统计"></a>百度统计</h2><ul>
+<li>注册百度统计账号</li>
+<li>定位到站点代码获取页面，复制代码添加到网站全部页面的标签前</li>
+<li>复制hm.js? 后面那串统计脚本 id</li>
+<li>编辑站点配置文件：<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">baidu_analytics: 31379905820c98af9f041ba3c2971602</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="站点建立时间"><a href="#站点建立时间" class="headerlink" title="站点建立时间"></a>站点建立时间</h2><p>编辑主题配置文件：<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">since: 2017</div></pre></td></tr></table></figure></p>
+<h2 id="订阅微信公众号"><a href="#订阅微信公众号" class="headerlink" title="订阅微信公众号"></a>订阅微信公众号</h2><p>在themes/hexo-theme-next/source/uploads目录下添加wechat-qcode.jpg<br>wechat-qcode.jpg是你的微信公众号二维码图片<br>编辑主题配置文件：<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">wechat_subscriber:</div><div class="line">  enabled: true</div><div class="line">  qcode: /uploads/wechat-qcode.jpg</div><div class="line">  description: 欢迎您扫一扫上面的微信公众号，订阅我的博客！</div></pre></td></tr></table></figure></p>
+<h1 id="七牛云存储图片"><a href="#七牛云存储图片" class="headerlink" title="七牛云存储图片"></a>七牛云存储图片</h1><p>七牛云是什么？</p>
+<blockquote>
+<p>可以用它做图片托管，取外链写在文章中。</p>
+</blockquote>
+<h2 id="注册七牛云账户"><a href="#注册七牛云账户" class="headerlink" title="注册七牛云账户"></a>注册七牛云账户</h2><p>七牛云官网：<a href="http://www.qiniu.com/" target="_blank" rel="external">http://www.qiniu.com/</a><br>对于新用户，七牛云存储免费赠送10G 的使用空间+10G/月的流量，对于小博客来说，是完全够用了。</p>
+<h2 id="添加资源"><a href="#添加资源" class="headerlink" title="添加资源"></a>添加资源</h2><p>在资源主页，点击对象存储模块的“立即添加”</p>
+<p><img src="http://ok9npmnqk.bkt.clouddn.com/1485231678200.png" alt="Alt text"></p>
+<p>填写信息：</p>
+<p><img src="http://ok9npmnqk.bkt.clouddn.com/1485232448200.png" alt="Alt text"></p>
+<h2 id="上传图片"><a href="#上传图片" class="headerlink" title="上传图片"></a>上传图片</h2><p>点击内容管理，上传图片：</p>
+<p><img src="http://ok9npmnqk.bkt.clouddn.com/1485232208195.png" alt="Alt text"></p>
+<h2 id="通过默认域名访问"><a href="#通过默认域名访问" class="headerlink" title="通过默认域名访问"></a>通过默认域名访问</h2><p>空间概览里面会有默认的域名，也可以自定义域名，不过需要付费</p>
+<p><img src="http://ok9npmnqk.bkt.clouddn.com/1485231942836.png" alt="Alt text"></p>
+<p>访问方式：默认域名/图片名称<br>上传图片的地址：<a href="https://portal.qiniu.com/bucket/sevencattle/resource" target="_blank" rel="external">https://portal.qiniu.com/bucket/sevencattle/resource</a></p>
+<p>推荐：<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">http://theme-next.iissnan.com/</a></p>
+<h1 id="部署博客"><a href="#部署博客" class="headerlink" title="部署博客"></a>部署博客</h1><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">hexo generate//或者hexo g</div><div class="line">hexo deploy</div></pre></td></tr></table></figure>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/01/20/DOM事件/" rel="next" title="DOM事件对象，DOM0&DOM2，事件兼容性处理">
+                <i class="fa fa-chevron-left"></i> DOM事件对象，DOM0&DOM2，事件兼容性处理
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/10/01/JavaScript简介和基本概念/" rel="prev" title="JavaScript简介和基本概念">
+                JavaScript简介和基本概念 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.png"
+               alt="Xu Ya" />
+          <p class="site-author-name" itemprop="name">Xu Ya</p>
+          <p class="site-description motion-element" itemprop="description">分享前端技术</p>
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">50</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#准备工作"><span class="nav-number">1.</span> <span class="nav-text">准备工作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Git"><span class="nav-number">1.1.</span> <span class="nav-text">安装Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注册github账号"><span class="nav-number">1.2.</span> <span class="nav-text">注册github账号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装node-js"><span class="nav-number">1.3.</span> <span class="nav-text">安装node.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装hexo"><span class="nav-number">1.4.</span> <span class="nav-text">安装hexo</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#初始化博客"><span class="nav-number">2.</span> <span class="nav-text">初始化博客</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#启动本地服务"><span class="nav-number">3.</span> <span class="nav-text">启动本地服务</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#打造博客专属域名"><span class="nav-number">4.</span> <span class="nav-text">打造博客专属域名</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#购买域名"><span class="nav-number">4.1.</span> <span class="nav-text">购买域名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#域名解析"><span class="nav-number">4.2.</span> <span class="nav-text">域名解析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#绑定域名"><span class="nav-number">4.3.</span> <span class="nav-text">绑定域名</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置博客"><span class="nav-number">5.</span> <span class="nav-text">配置博客</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#目录结构解读"><span class="nav-number">5.1.</span> <span class="nav-text">目录结构解读</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#站点配置文件解读"><span class="nav-number">5.2.</span> <span class="nav-text">站点配置文件解读</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#网站"><span class="nav-number">5.2.1.</span> <span class="nav-text">网站</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#网址"><span class="nav-number">5.2.2.</span> <span class="nav-text">网址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#目录"><span class="nav-number">5.2.3.</span> <span class="nav-text">目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文章"><span class="nav-number">5.2.4.</span> <span class="nav-text">文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分类-amp-标签"><span class="nav-number">5.2.5.</span> <span class="nav-text">分类 & 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#日期-时间-格式化"><span class="nav-number">5.2.6.</span> <span class="nav-text">日期/时间 格式化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分页"><span class="nav-number">5.2.7.</span> <span class="nav-text">分页</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#扩展"><span class="nav-number">5.2.8.</span> <span class="nav-text">扩展</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部署"><span class="nav-number">5.2.9.</span> <span class="nav-text">部署</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#我的基本配置"><span class="nav-number">5.3.</span> <span class="nav-text">我的基本配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#修改网站相关信息"><span class="nav-number">5.3.1.</span> <span class="nav-text">修改网站相关信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置个人域名-如果有的话"><span class="nav-number">5.3.2.</span> <span class="nav-text">配置个人域名(如果有的话)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置部署"><span class="nav-number">5.3.3.</span> <span class="nav-text">配置部署</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更换主题"><span class="nav-number">5.4.</span> <span class="nav-text">更换主题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#克隆主题到themes"><span class="nav-number">5.4.1.</span> <span class="nav-text">克隆主题到themes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改主题名称"><span class="nav-number">5.4.2.</span> <span class="nav-text">修改主题名称</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更换网页图标"><span class="nav-number">5.5.</span> <span class="nav-text">更换网页图标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#新建文章"><span class="nav-number">5.6.</span> <span class="nav-text">新建文章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改头像"><span class="nav-number">5.7.</span> <span class="nav-text">修改头像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改导航"><span class="nav-number">5.8.</span> <span class="nav-text">修改导航</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改底部"><span class="nav-number">5.9.</span> <span class="nav-text">修改底部</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图片的使用"><span class="nav-number">5.10.</span> <span class="nav-text">图片的使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#链接的使用"><span class="nav-number">5.11.</span> <span class="nav-text">链接的使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#新建页面"><span class="nav-number">5.12.</span> <span class="nav-text">新建页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#侧边栏"><span class="nav-number">5.13.</span> <span class="nav-text">侧边栏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#阅读全文"><span class="nav-number">5.14.</span> <span class="nav-text">阅读全文</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#阅读次数"><span class="nav-number">5.15.</span> <span class="nav-text">阅读次数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#百度统计"><span class="nav-number">5.16.</span> <span class="nav-text">百度统计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#站点建立时间"><span class="nav-number">5.17.</span> <span class="nav-text">站点建立时间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#订阅微信公众号"><span class="nav-number">5.18.</span> <span class="nav-text">订阅微信公众号</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#七牛云存储图片"><span class="nav-number">6.</span> <span class="nav-text">七牛云存储图片</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#注册七牛云账户"><span class="nav-number">6.1.</span> <span class="nav-text">注册七牛云账户</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加资源"><span class="nav-number">6.2.</span> <span class="nav-text">添加资源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#上传图片"><span class="nav-number">6.3.</span> <span class="nav-text">上传图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通过默认域名访问"><span class="nav-number">6.4.</span> <span class="nav-text">通过默认域名访问</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#部署博客"><span class="nav-number">7.</span> <span class="nav-text">部署博客</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Xu Ya</span>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+      <!-- UY BEGIN -->
+      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid="></script>
+      <!-- UY END -->
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
